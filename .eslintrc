@@ -1,0 +1,45 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "quotes": ["warn", "single", { "allowTemplateLiterals": true }],
+    "no-const-assign": "error",
+    "constructor-super": "error",
+    "no-this-before-super": "error",
+    "no-undef": "error",
+    "no-unreachable": "error",
+    "eqeqeq": ["error", "always", {"null": "ignore"}],
+    "no-unused-vars": "warn",
+    "no-useless-return": "warn",
+    "valid-typeof": "warn",
+    "no-multiple-empty-lines": "warn",
+    "no-multi-spaces": "warn",
+    "semi": ["error", "never"],
+    "max-len": ["warn", 80, {
+      "ignoreTemplateLiterals": true,
+      "ignoreUrls": true,
+      "ignorePattern": "^import\\s.+\\sfrom\\s.+$"
+    }],
+    "no-trailing-spaces": "warn",
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "no-cond-assign": "error",
+    "no-func-assign": "error",
+    "no-mixed-spaces-and-tabs": "warn",
+    "no-var": "warn",
+    "arrow-body-style": ["warn", "as-needed"],
+    "arrow-parens": ["warn", "as-needed"],
+    "prefer-const": "warn",
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "class-methods-use-this": "error",
+    "prefer-template": "error"
+  }
+}
