@@ -27,12 +27,12 @@
   },
   "homepage": "https://github.com/robertpiira/akvagrid#readme",
   "dependencies": {
-    "babel-cli": "*"
+    "babel-cli": "*",
+    "babel-preset-env": "^1.6.1"
   },
   "devDependencies": {
     "babel-core": "^6.5.2",
     "babel-eslint": "^7.0.0",
-    "babel-preset-env": "^1.6.1",
     "babel-tape-runner": "^2.0.1",
     "eslint": "^4.11.0",
     "faucet": "0.0.1",
