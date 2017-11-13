@@ -26,8 +26,10 @@
     "url": "https://github.com/robertpiira/akvagrid/issues"
   },
   "homepage": "https://github.com/robertpiira/akvagrid#readme",
+  "dependencies": {
+    "babel-cli": "*"
+  },
   "devDependencies": {
-    "babel-cli": "*",
     "babel-core": "^6.5.2",
     "babel-eslint": "^7.0.0",
     "babel-preset-env": "^1.6.1",
