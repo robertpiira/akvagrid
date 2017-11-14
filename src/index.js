@@ -283,7 +283,12 @@ Grid.prototype = {
       line.style.height = this.lineHeight
     }
 
-    lineCount = Math.floor((pageHeight || 100) / (line.clientHeight || 20))
+    document.body.appendChild(line)
+    const lineInDOM = document.querySelector(els.line)
+    const heightOfLine = lineInDOM.clientHeight
+    lineInDOM.remove()
+
+    lineCount = Math.floor((pageHeight || 100) / (heightOfLine || 20))
     htmlLine.appendChild(line)
 
     if (lineCount > 1000) {
