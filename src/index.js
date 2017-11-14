@@ -9,6 +9,7 @@ const css = `
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    pointer-events: none;
   }
 
   .akva-baseline {
@@ -67,11 +68,10 @@ const common = {
     const body = document.body
     const html = document.documentElement
 
-    return Math.max(
+    return Math.floor(Math.max(
       body.scrollHeight, body.offsetHeight,
-      html.clientHeight, html.scrollHeight,
-      html.offsetHeight
-    )
+      html.clientHeight, html.offsetHeight
+    ))
   },
 
   throttle: function(method, scope) {
@@ -283,7 +283,7 @@ Grid.prototype = {
       line.style.height = this.lineHeight
     }
 
-    lineCount = Math.ceil((pageHeight + 20) / (line.clientHeight + 10))
+    lineCount = Math.floor((pageHeight || 100) / (line.clientHeight || 20))
     htmlLine.appendChild(line)
 
     if (lineCount > 1000) {
