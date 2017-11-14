@@ -13,9 +13,10 @@ Install
 Usage
 -----
 
-`import akva from 'akvagrid'`
+```
+import akva from 'akvagrid'
 
-`const grids = [
+const grids = [
   {
     gridName: 'desktop-and-above',
     breakpoints: {from: {size: 65, unit: 'em'}, to: null},
@@ -43,7 +44,8 @@ Usage
   }
 ]
 
-akva.init(grids)`
+akva.init(grids)
+```
 
 Demo
 ----
