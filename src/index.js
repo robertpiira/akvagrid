@@ -145,9 +145,9 @@ const Grid = function Grid(o) {
 
     const handleWindowWidthChange = (query, id) => {
       if (query.matches) {
-        document.querySelector(`${els.wrapper}-${id}`).style.display = 'none'
-      } else {
         document.querySelector(`${els.wrapper}-${id}`).style.display = 'block'
+      } else {
+        document.querySelector(`${els.wrapper}-${id}`).style.display = 'none'
       }
     }
 
@@ -185,7 +185,7 @@ Grid.prototype = {
   updateGridOnWindowWidthChange: function() {
     const thisGrid = document.querySelector(`.akva-grid-${this.gridName}`)
 
-    if (thisGrid.style.display === 'block') {
+    if (thisGrid.style.display !== 'none') {
       thisGrid.style.height = `${common.getPageHeight()}px`
       this.createBaseline(common.getPageHeight(), this.gridName)
     }
